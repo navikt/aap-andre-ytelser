@@ -1,16 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.0"
+    kotlin("jvm") version "1.7.20"
     id("com.github.johnrengelman.shadow") version "7.1.2" apply false
 }
 
 allprojects {
     repositories {
         mavenCentral()
-        mavenLocal()
         maven("https://jitpack.io")
-        maven("https://packages.confluent.io/maven/")
     }
 }
 
@@ -27,12 +25,6 @@ subprojects {
             testLogging {
                 events("PASSED", "SKIPPED", "FAILED")
             }
-        }
-    }
-
-    configurations.all {
-        resolutionStrategy {
-            force("org.apache.kafka:kafka-clients:3.2.0")
         }
     }
 }
