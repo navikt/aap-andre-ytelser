@@ -4,10 +4,8 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.server.config.*
 import io.ktor.server.testing.*
-import kotlinx.coroutines.runBlocking
-import no.nav.aap.kafka.streams.test.KafkaStreamsMock
+import no.nav.aap.kafka.streams.v2.test.KStreamsMock
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class AppTest {
@@ -15,7 +13,7 @@ class AppTest {
     fun hello() {
         testApplication {
             environment { config = envVars }
-            application { server(KafkaStreamsMock()) }
+            application { server(KStreamsMock()) }
             val response = client.get("actuator/live")
             Assertions.assertEquals(HttpStatusCode.OK, response.status)
         }
