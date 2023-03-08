@@ -56,16 +56,16 @@ jobs:
           RESOURCE: .nais/app.yml
           VARS: .nais/dev.yml
 
-  deploy-prod:
-    name: Deploy (prod)
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: nais/deploy/actions/deploy@v1
-        env:
-          PRINT_PAYLOAD: true
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: .nais/app.yml
-          VARS: .nais/prod.yml
+#  deploy-prod:
+#    name: Deploy (prod)
+#    needs: build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: nais/deploy/actions/deploy@v1
+#        env:
+#          PRINT_PAYLOAD: true
+#          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+#          CLUSTER: prod-gcp
+#          RESOURCE: .nais/app.yml
+#          VARS: .nais/prod.yml
