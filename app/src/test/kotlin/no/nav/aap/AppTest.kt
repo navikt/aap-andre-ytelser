@@ -4,7 +4,7 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.server.config.*
 import io.ktor.server.testing.*
-import no.nav.aap.kafka.streams.v2.test.KStreamsMock
+import no.nav.aap.kafka.streams.v2.test.StreamsMock
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -13,7 +13,7 @@ class AppTest {
     fun hello() {
         testApplication {
             environment { config = envVars }
-            application { server(KStreamsMock()) }
+            application { server(StreamsMock()) }
             val response = client.get("actuator/live")
             Assertions.assertEquals(HttpStatusCode.OK, response.status)
         }
