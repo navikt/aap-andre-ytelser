@@ -2,7 +2,7 @@ val aapLibVersion = "3.7.44"
 val ktorVersion = "2.3.1"
 
 plugins {
-    kotlin("jvm") version "1.8.21"
+    kotlin("jvm") version "1.8.22"
     id("io.ktor.plugin") version "2.3.1"
 }
 
