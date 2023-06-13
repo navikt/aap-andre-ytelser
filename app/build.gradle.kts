@@ -26,7 +26,7 @@ dependencies {
     implementation("io.ktor:ktor-client-auth:$ktorVersion")
 
     implementation("io.ktor:ktor-server-metrics-micrometer:$ktorVersion")
-    implementation("io.micrometer:micrometer-registry-prometheus:1.11.0")
+    implementation("io.micrometer:micrometer-registry-prometheus:1.11.1")
 
     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
     implementation("io.ktor:ktor-serialization-jackson:$ktorVersion")
