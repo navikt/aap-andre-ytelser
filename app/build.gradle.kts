@@ -32,7 +32,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-jackson:$ktorVersion")
 
     implementation("ch.qos.logback:logback-classic:1.4.8")
-    runtimeOnly("net.logstash.logback:logstash-logback-encoder:7.3")
+    runtimeOnly("net.logstash.logback:logstash-logback-encoder:7.4")
 
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2")
 
